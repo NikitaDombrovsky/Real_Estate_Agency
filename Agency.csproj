@@ -140,6 +140,12 @@
     <Compile Include="Apartment.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="ApartmentEditPage.xaml.cs">
+      <DependentUpon>ApartmentEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ApartmentPage.xaml.cs">
+      <DependentUpon>ApartmentPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
@@ -194,6 +200,14 @@
     <Compile Include="Supply.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
+    <Page Include="ApartmentEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ApartmentPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ClientEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

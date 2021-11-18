@@ -36,6 +36,12 @@ namespace Agency
             App.ParentWindowRef.ParentFrame.Navigate(new ClientPage());
 
         }
+        
+        private void ApartmentsButton_Сlick(object sender, RoutedEventArgs e)
+        {
+            App.ParentWindowRef.ParentFrame.Navigate(new ApartmentPage());
+
+        }
         private void AButton_Сlick(object sender, RoutedEventArgs e)
         {
             App.ParentWindowRef.ParentFrame.Navigate(new RPage());

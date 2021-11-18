@@ -20,9 +20,39 @@ namespace Agency
     /// </summary>
     public partial class ApartmentEditPage : Page
     {
-        public ApartmentEditPage()
+        private Apartment _apartment = new Apartment();
+        public ApartmentEditPage(Apartment selectedapartment)
         {
             InitializeComponent();
+            Application.Current.MainWindow.Height = 350;
+            Application.Current.MainWindow.Width = 800;
+            if (selectedapartment != null)
+                _apartment = selectedapartment;
+
+
+            DataContext = _apartment;
+        }
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
+            StringBuilder errors = new StringBuilder();
+            if (errors.Length > 0)
+            {
+                MessageBox.Show(errors.ToString());
+                return;
+            }
+            if (_apartment.Id == 0)
+                Real_estate_agencyEntities2.GetContext().Apartments.Add(_apartment);
+            try
+            {
+                Real_estate_agencyEntities2.GetContext().SaveChanges();
+                MessageBox.Show("Добавление успешно!");
+                App.ParentWindowRef.ParentFrame.Navigate(new ClientPage());
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString());
+
+            }
         }
     }
 }
