@@ -49,10 +49,10 @@ namespace Agency
                 return;
             }
             if (_client.Id == 0)
-                Real_estate_agencyEntities1.GetContext().Clients.Add(_client);
+                Real_estate_agencyEntities2.GetContext().Clients.Add(_client);
             try
             {
-                Real_estate_agencyEntities1.GetContext().SaveChanges();
+                Real_estate_agencyEntities2.GetContext().SaveChanges();
                 MessageBox.Show("Добавление успешно!");
                 App.ParentWindowRef.ParentFrame.Navigate(new ClientPage());
             }

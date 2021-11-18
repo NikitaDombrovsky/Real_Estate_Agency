@@ -195,7 +195,6 @@ F:\Agency\bin\Debug\System.Numerics.Vectors.xml
 F:\Agency\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 F:\Agency\bin\Debug\System.Threading.Tasks.Extensions.xml
 F:\Agency\bin\Debug\ru\EntityFramework.resources.dll
-F:\Agency\obj\Debug\Agency.csprojAssemblyReference.cache
 F:\Agency\obj\Debug\ClientPage.g.cs
 F:\Agency\obj\Debug\MainPage.g.cs
 F:\Agency\obj\Debug\MainWindow.g.cs
@@ -296,3 +295,4 @@ G:\Agency\obj\Debug\Agency.csproj.CoreCompileInputs.cache
 G:\Agency\obj\Debug\Agency.csproj.CopyComplete
 G:\Agency\obj\Debug\Agency.exe
 G:\Agency\obj\Debug\Agency.pdb
+F:\Agency\obj\Debug\Agency.csprojAssemblyReference.cache

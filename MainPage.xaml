@@ -25,14 +25,21 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <Button Content="Квартира" Grid.Column="0" Margin="30,15,15,10" />
+            <Button Content="Квартира" Click="ApartmentsButton_Сlick" Grid.Column="0" Margin="30,15,15,10" />
             <Button Content="Дом" Grid.Column="1" Margin="15,15,15,10"/>
             <Button Content="Земля" Grid.Column="2" Margin="15,15,30,10"/>
         </Grid>
         <!-- <Button Content="Квартира"  VerticalAlignment="Top" Click="RButton_Сlick" Height="25" Margin="30,15,0,0" Grid.Row="2" HorizontalAlignment="Left" Width="245" />
         <Button Content="Дом"  VerticalAlignment="Top" Click="RButton_Сlick" Height="25" Margin="280,15,0,0" Grid.Row="2" HorizontalAlignment="Left" Width="245" />
         <Button Content="Земля"  VerticalAlignment="Top" Click="RButton_Сlick" Height="25" Margin="530,15,30,0" Grid.Row="2" /> -->
-        <Button Content="Риэлторы"  VerticalAlignment="Top" Click="RButton_Сlick" Height="25" Margin="30,15,30,0" Grid.Row="3"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions >
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Button Content="Предложение" Grid.Column="0" Margin="30,15,15,10" />
+            <Button Content="Потребность" Grid.Column="1" Margin="15,15,30,10"/>
+        </Grid>
         <Button Content="Риэлторы"  VerticalAlignment="Top" Click="RButton_Сlick" Height="25" Margin="30,15,30,0" Grid.Row="4"/>
         <Grid Panel.ZIndex="-2" Background="Gray" Grid.Row="5"/>
     </Grid>

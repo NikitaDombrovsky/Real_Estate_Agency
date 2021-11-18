@@ -135,55 +135,55 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Agent.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Apartment.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Client.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="ClientEditPage.xaml.cs">
       <DependentUpon>ClientEditPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="C_Apartment_demands_.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="C_House_demands_.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="C_Land_demands_.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Deal.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Demand.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="District.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="House.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Compile Include="Land.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="RDA_Model.Context.cs">
+    <Compile Include="REA_Model.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RDA_Model.Context.tt</DependentUpon>
+      <DependentUpon>REA_Model.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="RDA_Model.cs">
+    <Compile Include="REA_Model.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
-    <Compile Include="RDA_Model.Designer.cs">
+    <Compile Include="REA_Model.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>RDA_Model.edmx</DependentUpon>
+      <DependentUpon>REA_Model.edmx</DependentUpon>
     </Compile>
     <Compile Include="REditPage.xaml.cs">
       <DependentUpon>REditPage.xaml</DependentUpon>
@@ -191,17 +191,8 @@
     <Compile Include="RPage.xaml.cs">
       <DependentUpon>RPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="sp_helpdiagramdefinition_Result.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sp_helpdiagrams_Result.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
-    </Compile>
     <Compile Include="Supply.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
-    </Compile>
-    <Compile Include="sysdiagram.cs">
-      <DependentUpon>RDA_Model.tt</DependentUpon>
+      <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
     <Page Include="ClientEditPage.xaml">
       <SubType>Designer</SubType>
@@ -266,12 +257,12 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <EntityDeploy Include="RDA_Model.edmx">
+    <EntityDeploy Include="REA_Model.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>RDA_Model.Designer.cs</LastGenOutput>
+      <LastGenOutput>REA_Model.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="RDA_Model.edmx.diagram">
-      <DependentUpon>RDA_Model.edmx</DependentUpon>
+    <None Include="REA_Model.edmx.diagram">
+      <DependentUpon>REA_Model.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -281,15 +272,15 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="RDA_Model.Context.tt">
+    <Content Include="REA_Model.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RDA_Model.edmx</DependentUpon>
-      <LastGenOutput>RDA_Model.Context.cs</LastGenOutput>
+      <DependentUpon>REA_Model.edmx</DependentUpon>
+      <LastGenOutput>REA_Model.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="RDA_Model.tt">
+    <Content Include="REA_Model.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>RDA_Model.edmx</DependentUpon>
-      <LastGenOutput>RDA_Model.cs</LastGenOutput>
+      <DependentUpon>REA_Model.edmx</DependentUpon>
+      <LastGenOutput>REA_Model.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

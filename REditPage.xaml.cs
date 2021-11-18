@@ -47,10 +47,10 @@ namespace Agency
                 return;
             }
             if (_agent.Id == 0)
-                Real_estate_agencyEntities1.GetContext().Agents.Add(_agent);
+                Real_estate_agencyEntities2.GetContext().Agents.Add(_agent);
             try
             {
-                Real_estate_agencyEntities1.GetContext().SaveChanges();
+                Real_estate_agencyEntities2.GetContext().SaveChanges();
                 MessageBox.Show("Добавление успешно!");
                 App.ParentWindowRef.ParentFrame.Navigate(new RPage());
             }

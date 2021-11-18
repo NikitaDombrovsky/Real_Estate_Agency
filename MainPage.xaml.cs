@@ -36,6 +36,11 @@ namespace Agency
             App.ParentWindowRef.ParentFrame.Navigate(new ClientPage());
 
         }
+        private void AButton_Сlick(object sender, RoutedEventArgs e)
+        {
+            App.ParentWindowRef.ParentFrame.Navigate(new RPage());
+
+        }
 
         private void Page_IsVisibleChanged(object sender, DependencyPropertyChangedEventArgs e)
         {

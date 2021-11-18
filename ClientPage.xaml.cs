@@ -31,7 +31,7 @@ namespace Agency
             Application.Current.MainWindow.Height = 350;
             Application.Current.MainWindow.Width = 800;
             DataContext = _client;
-            clientDataGrid.ItemsSource = Real_estate_agencyEntities1.GetContext().Clients.ToList();
+            clientDataGrid.ItemsSource = Real_estate_agencyEntities2.GetContext().Clients.ToList();
             //collectionViewSource = ((CollectionViewSource)(FindResource("clientViewSource")));
            // DataContext = this;
         }
@@ -60,11 +60,11 @@ namespace Agency
             {
                 try
                 {
-                    Real_estate_agencyEntities1.GetContext().Clients.RemoveRange(clientForRemoving);
-                    Real_estate_agencyEntities1.GetContext().SaveChanges();
+                    Real_estate_agencyEntities2.GetContext().Clients.RemoveRange(clientForRemoving);
+                    Real_estate_agencyEntities2.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");
 
-                    clientDataGrid.ItemsSource = Real_estate_agencyEntities1.GetContext().Clients.ToList();
+                    clientDataGrid.ItemsSource = Real_estate_agencyEntities2.GetContext().Clients.ToList();
                 }
                 catch (Exception ex)
                 {
@@ -78,8 +78,8 @@ namespace Agency
         {
             if (Visibility == Visibility.Visible)
             {
-                Real_estate_agencyEntities1.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                clientDataGrid.ItemsSource = Real_estate_agencyEntities1.GetContext().Clients.ToList();
+                Real_estate_agencyEntities2.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
+                clientDataGrid.ItemsSource = Real_estate_agencyEntities2.GetContext().Clients.ToList();
                // clientDataGrid.Items.Refresh();
             }
         }
