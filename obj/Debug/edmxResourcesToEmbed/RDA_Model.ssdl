@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Хранилище Real_estate_agencyModel" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Agents">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="255" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+    <Property Name="DealShare" Type="int" />
+  </EntityType>
+  <EntityType Name="'Apartment-demands'">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Demands" Type="int" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_House" Type="int" />
+    <Property Name="Address_Number" Type="int" />
+    <Property Name="MinArea" Type="int" />
+    <Property Name="MaxArea" Type="int" />
+    <Property Name="MinRooms" Type="int" />
+    <Property Name="MaxRooms" Type="int" />
+    <Property Name="MinFloor" Type="int" />
+    <Property Name="MaxFloor" Type="int" />
+  </EntityType>
+  <EntityType Name="Apartments">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Districts" Type="int" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_House" Type="int" />
+    <Property Name="Address_Number" Type="int" />
+    <Property Name="Coordinate_latitude" Type="int" />
+    <Property Name="Coordinate_longitude" Type="int" />
+    <Property Name="TotalArea" Type="int" />
+    <Property Name="Rooms" Type="int" />
+    <Property Name="Floor" Type="int" />
+  </EntityType>
+  <EntityType Name="Clients">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="nvarchar" MaxLength="255" />
+    <Property Name="MiddleName" Type="nvarchar" MaxLength="255" />
+    <Property Name="LastName" Type="nvarchar" MaxLength="255" />
+    <Property Name="Phone" Type="bigint" />
+    <Property Name="Email" Type="nvarchar" MaxLength="255" />
+  </EntityType>
+  <EntityType Name="Deals">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Demand_Id" Type="int" Nullable="false" />
+    <Property Name="Supply_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Demands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ClientId" Type="int" />
+    <Property Name="AgentId" Type="int" />
+    <Property Name="Type" Type="nvarchar" MaxLength="50" />
+    <Property Name="MinPrice" Type="int" />
+    <Property Name="MaxPrice" Type="int" />
+  </EntityType>
+  <EntityType Name="Districts">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
+    <Property Name="area" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="'House-demands'">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Demands" Type="int" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_House" Type="int" />
+    <Property Name="Address_Number" Type="int" />
+    <Property Name="MinFloors" Type="int" />
+    <Property Name="MaxFloors" Type="int" />
+    <Property Name="MinArea" Type="int" />
+    <Property Name="MaxArea" Type="int" />
+    <Property Name="MinRooms" Type="int" />
+    <Property Name="MaxRooms" Type="int" />
+  </EntityType>
+  <EntityType Name="Houses">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Distrcts" Type="int" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_House" Type="int" />
+    <Property Name="Address_Number" Type="int" />
+    <Property Name="Coordinate_latitude" Type="int" />
+    <Property Name="Coordinate_longitude" Type="int" />
+    <Property Name="TotalFloors" Type="int" />
+    <Property Name="TotalArea" Type="int" />
+  </EntityType>
+  <EntityType Name="'Land-demands'">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Demands" Type="int" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_House" Type="int" />
+    <Property Name="Address_Number" Type="int" />
+    <Property Name="MinArea" Type="int" />
+    <Property Name="MaxArea" Type="int" />
+  </EntityType>
+  <EntityType Name="Lands">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id_Districts" Type="int" />
+    <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />
+    <Property Name="Address_House" Type="int" />
+    <Property Name="Address_Number" Type="int" />
+    <Property Name="Coordinate_latitude" Type="int" />
+    <Property Name="Coordinate_longitude" Type="int" />
+    <Property Name="TotalArea" Type="int" />
+  </EntityType>
+  <EntityType Name="Supplies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" />
+    <Property Name="AgentId" Type="int" Nullable="false" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="Id_Districts" Type="int" />
+  </EntityType>
+  <Association Name="FK_'Apartment-demands'_Demands">
+    <End Role="Demands" Type="Self.Demands" Multiplicity="0..1" />
+    <End Role="'Apartment-demands'" Type="Self.'Apartment-demands'" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Demands">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="'Apartment-demands'">
+        <PropertyRef Name="Id_Demands" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Apartments_Districts">
+    <End Role="Districts" Type="Self.Districts" Multiplicity="0..1" />
+    <End Role="Apartments" Type="Self.Apartments" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Districts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Apartments">
+        <PropertyRef Name="Id_Districts" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Deals_Demands">
+    <End Role="Demands" Type="Self.Demands" Multiplicity="1" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Demands">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Deals">
+        <PropertyRef Name="Demand_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Deals_Supplies">
+    <End Role="Supplies" Type="Self.Supplies" Multiplicity="1" />
+    <End Role="Deals" Type="Self.Deals" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Supplies">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Deals">
+        <PropertyRef Name="Supply_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Demands_Agents">
+    <End Role="Agents" Type="Self.Agents" Multiplicity="0..1" />
+    <End Role="Demands" Type="Self.Demands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Demands">
+        <PropertyRef Name="AgentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Demands_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="0..1" />
+    <End Role="Demands" Type="Self.Demands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Demands">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_'House-demands'_Demands">
+    <End Role="Demands" Type="Self.Demands" Multiplicity="0..1" />
+    <End Role="'House-demands'" Type="Self.'House-demands'" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Demands">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="'House-demands'">
+        <PropertyRef Name="Id_Demands" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Houses_Districts">
+    <End Role="Districts" Type="Self.Districts" Multiplicity="0..1" />
+    <End Role="Houses" Type="Self.Houses" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Districts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Houses">
+        <PropertyRef Name="Id_Distrcts" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_'Land-demands'_Demands">
+    <End Role="Demands" Type="Self.Demands" Multiplicity="0..1" />
+    <End Role="'Land-demands'" Type="Self.'Land-demands'" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Demands">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="'Land-demands'">
+        <PropertyRef Name="Id_Demands" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Lands_Districts">
+    <End Role="Districts" Type="Self.Districts" Multiplicity="0..1" />
+    <End Role="Lands" Type="Self.Lands" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Districts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Lands">
+        <PropertyRef Name="Id_Districts" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplies_Agents">
+    <End Role="Agents" Type="Self.Agents" Multiplicity="1" />
+    <End Role="Supplies" Type="Self.Supplies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Agents">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Supplies">
+        <PropertyRef Name="AgentId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplies_Clients">
+    <End Role="Clients" Type="Self.Clients" Multiplicity="1" />
+    <End Role="Supplies" Type="Self.Supplies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Clients">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Supplies">
+        <PropertyRef Name="ClientId" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Supplies_Districts">
+    <End Role="Districts" Type="Self.Districts" Multiplicity="0..1" />
+    <End Role="Supplies" Type="Self.Supplies" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Districts">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Supplies">
+        <PropertyRef Name="Id_Districts" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Хранилище Real_estate_agencyModelContainer">
+    <EntitySet Name="Agents" EntityType="Self.Agents" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'Apartment-demands'" EntityType="Self.'Apartment-demands'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Apartments" EntityType="Self.Apartments" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Clients" EntityType="Self.Clients" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Deals" EntityType="Self.Deals" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Demands" EntityType="Self.Demands" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Districts" EntityType="Self.Districts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'House-demands'" EntityType="Self.'House-demands'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Houses" EntityType="Self.Houses" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="'Land-demands'" EntityType="Self.'Land-demands'" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Lands" EntityType="Self.Lands" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supplies" EntityType="Self.Supplies" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK_'Apartment-demands'_Demands" Association="Self.FK_'Apartment-demands'_Demands">
+      <End Role="Demands" EntitySet="Demands" />
+      <End Role="'Apartment-demands'" EntitySet="'Apartment-demands'" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Apartments_Districts" Association="Self.FK_Apartments_Districts">
+      <End Role="Districts" EntitySet="Districts" />
+      <End Role="Apartments" EntitySet="Apartments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Deals_Demands" Association="Self.FK_Deals_Demands">
+      <End Role="Demands" EntitySet="Demands" />
+      <End Role="Deals" EntitySet="Deals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Deals_Supplies" Association="Self.FK_Deals_Supplies">
+      <End Role="Supplies" EntitySet="Supplies" />
+      <End Role="Deals" EntitySet="Deals" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Demands_Agents" Association="Self.FK_Demands_Agents">
+      <End Role="Agents" EntitySet="Agents" />
+      <End Role="Demands" EntitySet="Demands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Demands_Clients" Association="Self.FK_Demands_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Demands" EntitySet="Demands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_'House-demands'_Demands" Association="Self.FK_'House-demands'_Demands">
+      <End Role="Demands" EntitySet="Demands" />
+      <End Role="'House-demands'" EntitySet="'House-demands'" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Houses_Districts" Association="Self.FK_Houses_Districts">
+      <End Role="Districts" EntitySet="Districts" />
+      <End Role="Houses" EntitySet="Houses" />
+    </AssociationSet>
+    <AssociationSet Name="FK_'Land-demands'_Demands" Association="Self.FK_'Land-demands'_Demands">
+      <End Role="Demands" EntitySet="Demands" />
+      <End Role="'Land-demands'" EntitySet="'Land-demands'" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Lands_Districts" Association="Self.FK_Lands_Districts">
+      <End Role="Districts" EntitySet="Districts" />
+      <End Role="Lands" EntitySet="Lands" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplies_Agents" Association="Self.FK_Supplies_Agents">
+      <End Role="Agents" EntitySet="Agents" />
+      <End Role="Supplies" EntitySet="Supplies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplies_Clients" Association="Self.FK_Supplies_Clients">
+      <End Role="Clients" EntitySet="Clients" />
+      <End Role="Supplies" EntitySet="Supplies" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Supplies_Districts" Association="Self.FK_Supplies_Districts">
+      <End Role="Districts" EntitySet="Districts" />
+      <End Role="Supplies" EntitySet="Supplies" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
