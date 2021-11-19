@@ -36,15 +36,34 @@ namespace Agency
             App.ParentWindowRef.ParentFrame.Navigate(new ClientPage());
 
         }
-        
+        private void AButton_Сlick(object sender, RoutedEventArgs e)
+        {
+            App.ParentWindowRef.ParentFrame.Navigate(new RPage());
+
+        }
+
         private void ApartmentsButton_Сlick(object sender, RoutedEventArgs e)
         {
             App.ParentWindowRef.ParentFrame.Navigate(new ApartmentPage());
 
         }
-        private void AButton_Сlick(object sender, RoutedEventArgs e)
+        private void HouseButton_Сlick(object sender, RoutedEventArgs e)
         {
-            App.ParentWindowRef.ParentFrame.Navigate(new RPage());
+            App.ParentWindowRef.ParentFrame.Navigate(new HousePage());
+
+        }
+        private void LandButton_Click(object sender, RoutedEventArgs e)
+        {
+            App.ParentWindowRef.ParentFrame.Navigate(new LandsPage());
+
+        }
+
+        private void SuppliesButton_Сlick(object sender, RoutedEventArgs e)
+        {
+            App.ParentWindowRef.ParentFrame.Navigate(new SupplyPage());
+        }
+        private void DemandsButton_Click(object sender, RoutedEventArgs e)
+        {
 
         }
 

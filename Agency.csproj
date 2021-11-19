@@ -173,8 +173,20 @@
     <Compile Include="House.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="HouseEditPage.xaml.cs">
+      <DependentUpon>HouseEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HousePage.xaml.cs">
+      <DependentUpon>HousePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Land.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
+    </Compile>
+    <Compile Include="LandsEditPage.xaml.cs">
+      <DependentUpon>LandsEditPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LandsPage.xaml.cs">
+      <DependentUpon>LandsPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="REA_Model.Context.cs">
       <AutoGen>True</AutoGen>
@@ -200,6 +212,9 @@
     <Compile Include="Supply.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="SupplyPage.xaml.cs">
+      <DependentUpon>SupplyPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Supply_View.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
@@ -216,6 +231,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ClientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HouseEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="HousePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LandsEditPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LandsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -246,6 +277,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SupplyPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

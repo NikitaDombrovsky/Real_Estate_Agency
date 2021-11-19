@@ -16,36 +16,34 @@ using System.Windows.Shapes;
 namespace Agency
 {
     /// <summary>
-    /// Логика взаимодействия для ApartmentEditPage.xaml
+    /// Логика взаимодействия для LandsEditPage.xaml
     /// </summary>
-    public partial class ApartmentEditPage : Page
+    public partial class LandsEditPage : Page
     {
-        private Apartment _apartment = new Apartment();
-        public ApartmentEditPage(Apartment selectedapartment)
+        private Land _land = new Land();
+        public LandsEditPage(Land selectedland)
         {
             InitializeComponent();
-            Application.Current.MainWindow.Height = 350;
-            Application.Current.MainWindow.Width = 800;
-            if (selectedapartment != null)
-                _apartment = selectedapartment;
-            DataContext = _apartment;
+            if (selectedland != null)
+                _land = selectedland;
+            DataContext = _land;
         }
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
-            
+
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());
                 return;
             }
-            if (_apartment.Id == 0)
-                Real_estate_agencyEntities2.GetContext().Apartments.Add(_apartment);
+            if (_land.Id == 0)
+                Real_estate_agencyEntities2.GetContext().Lands.Add(_land);
             try
             {
                 Real_estate_agencyEntities2.GetContext().SaveChanges();
                 MessageBox.Show("Добавление успешно!");
-                App.ParentWindowRef.ParentFrame.Navigate(new ApartmentPage());
+                App.ParentWindowRef.ParentFrame.Navigate(new LandsPage());
             }
             catch (Exception ex)
             {

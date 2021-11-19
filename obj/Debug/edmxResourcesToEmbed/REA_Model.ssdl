@@ -31,7 +31,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Id_Districts" Type="int" />
     <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
     <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />
@@ -102,7 +102,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Id_Distrcts" Type="int" />
     <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
     <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />
@@ -130,7 +130,7 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="Id_Districts" Type="int" />
     <Property Name="Address_City" Type="nvarchar" MaxLength="255" />
     <Property Name="Address_Street" Type="nvarchar" MaxLength="255" />

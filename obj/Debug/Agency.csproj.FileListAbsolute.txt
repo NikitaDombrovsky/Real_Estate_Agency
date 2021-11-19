@@ -300,3 +300,13 @@ F:\Agency\obj\Debug\ApartmentEditPage.g.cs
 F:\Agency\obj\Debug\ApartmentPage.g.cs
 F:\Agency\obj\Debug\ApartmentEditPage.baml
 F:\Agency\obj\Debug\ApartmentPage.baml
+F:\Agency\obj\Debug\SupplyPage.g.cs
+F:\Agency\obj\Debug\SupplyPage.baml
+F:\Agency\obj\Debug\HouseEditPage.g.cs
+F:\Agency\obj\Debug\HousePage.g.cs
+F:\Agency\obj\Debug\LandsPage.g.cs
+F:\Agency\obj\Debug\HouseEditPage.baml
+F:\Agency\obj\Debug\HousePage.baml
+F:\Agency\obj\Debug\LandsPage.baml
+F:\Agency\obj\Debug\LandsEditPage.g.cs
+F:\Agency\obj\Debug\LandsEditPage.baml
