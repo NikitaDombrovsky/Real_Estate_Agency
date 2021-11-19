@@ -20,9 +20,13 @@
             <DataGrid.Columns>
                 <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="ID" Width="Auto"/>
                 <DataGridTextColumn x:Name="PriceColumn" Binding="{Binding Price}" Header="Цена" Width="Auto"/>
-                <DataGridTextColumn x:Name="AqentIdColumn" Binding="{Binding AgentId}" Header="Id Агента" Width="Auto"/>
-                <DataGridTextColumn x:Name="ClientIdColumn" Binding="{Binding ClientId}" Header="Id Клиента" Width="Auto"/>
-                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding name}" Header="Имя" Width="Auto"/>
+                <DataGridTextColumn x:Name="AqentIdColumn" Binding="{Binding Agent.FirstName}" Header="Ф.Агента" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Agent.MiddleName}" Header="И.Агента" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Agent.LastName}" Header="О.Агента" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Client.FirstName}" Header="Ф.Клиента" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Client.MiddleName}" Header="И.Клиента" Width="Auto"/>
+                <DataGridTextColumn Binding="{Binding Client.LastName}" Header="О.Клиента" Width="Auto"/>
+                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding District.name}" Header="Имя" Width="Auto"/>
                 <DataGridTemplateColumn Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>

@@ -212,6 +212,9 @@
     <Compile Include="Supply.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="SupplyEditPage.xaml.cs">
+      <DependentUpon>SupplyEditPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SupplyPage.xaml.cs">
       <DependentUpon>SupplyPage.xaml</DependentUpon>
     </Compile>
@@ -277,6 +280,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="RPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SupplyEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

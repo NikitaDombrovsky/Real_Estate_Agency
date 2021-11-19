@@ -310,3 +310,5 @@ F:\Agency\obj\Debug\HousePage.baml
 F:\Agency\obj\Debug\LandsPage.baml
 F:\Agency\obj\Debug\LandsEditPage.g.cs
 F:\Agency\obj\Debug\LandsEditPage.baml
+F:\Agency\obj\Debug\SupplyEditPage.g.cs
+F:\Agency\obj\Debug\SupplyEditPage.baml
