@@ -31,6 +31,7 @@ namespace Agency
                 _context = new Real_estate_agencyEntities2();
             return _context;
         }
+
         public virtual DbSet<Agent> Agents { get; set; }
         public virtual DbSet<C_Apartment_demands_> C_Apartment_demands_ { get; set; }
         public virtual DbSet<Apartment> Apartments { get; set; }
@@ -43,5 +44,6 @@ namespace Agency
         public virtual DbSet<C_Land_demands_> C_Land_demands_ { get; set; }
         public virtual DbSet<Land> Lands { get; set; }
         public virtual DbSet<Supply> Supplies { get; set; }
+        public virtual DbSet<Supply_View> Supply_View { get; set; }
     }
 }

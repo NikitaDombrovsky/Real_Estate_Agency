@@ -30,6 +30,7 @@
         <AssociationConnector Association="Real_estate_agencyModel.FK_Houses_Districts" ManuallyRouted="false" />
         <AssociationConnector Association="Real_estate_agencyModel.FK_Lands_Districts" ManuallyRouted="false" />
         <AssociationConnector Association="Real_estate_agencyModel.FK_Supplies_Districts" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="Real_estate_agencyModel.Supply_View" Width="1.5" PointX="0.75" PointY="0.75" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

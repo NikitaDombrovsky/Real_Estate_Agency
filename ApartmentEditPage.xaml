@@ -16,22 +16,36 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
-        <TextBlock Text="Имя" Height="30" Width="100" Foreground="Black" Background="LightGray"  />
-        <TextBlock Text="Фамилия" Grid.Row="1" Height="30" Width="100" Foreground="Black" Background="LightGray" />
-        <TextBlock Text="Отчество" Grid.Row="2" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
-        <TextBlock Text="Телефон" Grid.Row="3" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
-        <TextBlock Text="Почта" Grid.Row="4" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
-        <TextBox Text="{Binding MiddleName}" Grid.Column="1" Height="30" Margin="0,0,10,0"/>
-        <TextBox Text="{Binding FirstName }" Grid.Column="1" Grid.Row="1"  Height="30" Margin="0,0,10,0"/>
-        <TextBox Text="{Binding LastName}" Grid.Column="1" Grid.Row="2" Height="30" Margin="0,0,10,0"/>
-        <TextBox Text="{Binding Phone}" Grid.Column="1" Grid.Row="3"  Height="30" Margin="0,0,10,0"/>
-        <TextBox Text="{Binding Email}" Grid.Column="1" Grid.Row="4"  Height="30" Margin="0,0,10,0"/>
-        <Grid Panel.ZIndex="-2" Background="Gray" Grid.Row="5" Grid.ColumnSpan="2"/>
-        <Button Content="Сохранить" x:Name="BtnAdd"  Grid.Row="5" Grid.Column="0" Grid.ColumnSpan="2" Width="200" Height="50"  Click="BtnAdd_Click" />
+        <TextBlock Text="Город" Height="30" Width="100" Foreground="Black" Background="LightGray"  />
+        <TextBlock Text="Улица" Grid.Row="1" Height="30" Width="100" Foreground="Black" Background="LightGray" />
+        <TextBlock Text="Дом" Grid.Row="2" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
+        <TextBlock Text="Адрес" Grid.Row="3" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
+        <TextBlock Text="Широта" Grid.Row="4" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
+        <TextBlock Text="Долгота" Grid.Row="5" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
+        <TextBlock Text="Площадь" Grid.Row="6" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
+        <TextBlock Text="Комнаты" Grid.Row="7" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
+        <TextBlock Text="Этажи" Grid.Row="8" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
+        <TextBox Text="{Binding Address_City}" Grid.Column="1" Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding Address_Street }" Grid.Column="1" Grid.Row="1"  Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding Address_House}" Grid.Column="1" Grid.Row="2" Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding Address_Number}" Grid.Column="1" Grid.Row="3"  Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding Coordinate_latitude}" Grid.Column="1" Grid.Row="4"  Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding Coordinate_longitude}" Grid.Column="1" Grid.Row="5"  Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding TotalArea}" Grid.Column="1" Grid.Row="6"  Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding Coordinate_longitude}" Grid.Column="1" Grid.Row="5"  Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding TotalArea}" Grid.Column="1" Grid.Row="6"  Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding Rooms}" Grid.Column="1" Grid.Row="7"  Height="30" Margin="0,0,10,0"/>
+        <TextBox Text="{Binding Floor}" Grid.Column="1" Grid.Row="8"  Height="30" Margin="0,0,10,0"/>
+        <Grid Panel.ZIndex="-2" Background="Gray" Grid.Row="9" Grid.ColumnSpan="2"/>
+        <Button Content="Сохранить" x:Name="BtnAdd"  Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Width="200" Height="35"  Click="BtnAdd_Click" />
     </Grid>
 </Page>

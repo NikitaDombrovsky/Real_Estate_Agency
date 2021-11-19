@@ -150,6 +150,21 @@
     <Property Name="ClientId" Type="int" Nullable="false" />
     <Property Name="Id_Districts" Type="int" />
   </EntityType>
+  <!--Ошибки, обнаруженные при создании:
+предупреждение 6002: В таблице или представлении "Real_estate_agency.dbo.Supply_View" не определен первичный ключ. Ключ был выведен, а определение таблицы или представления было создано в режиме только для чтения.-->
+  <EntityType Name="Supply_View">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="AgentId" />
+      <PropertyRef Name="ClientId" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Price" Type="int" />
+    <Property Name="AgentId" Type="int" Nullable="false" />
+    <Property Name="ClientId" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="255" Nullable="false" />
+  </EntityType>
   <Association Name="FK_'Apartment-demands'_Demands">
     <End Role="Demands" Type="Self.Demands" Multiplicity="0..1" />
     <End Role="'Apartment-demands'" Type="Self.'Apartment-demands'" Multiplicity="*" />
@@ -319,6 +334,15 @@
     <EntitySet Name="'Land-demands'" EntityType="Self.'Land-demands'" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Lands" EntityType="Self.Lands" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Supplies" EntityType="Self.Supplies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Supply_View" EntityType="Self.Supply_View" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [Supply_View].[Id] AS [Id], 
+    [Supply_View].[Price] AS [Price], 
+    [Supply_View].[AgentId] AS [AgentId], 
+    [Supply_View].[ClientId] AS [ClientId], 
+    [Supply_View].[name] AS [name]
+    FROM [dbo].[Supply_View] AS [Supply_View]</DefiningQuery>
+    </EntitySet>
     <AssociationSet Name="FK_'Apartment-demands'_Demands" Association="Self.FK_'Apartment-demands'_Demands">
       <End Role="Demands" EntitySet="Demands" />
       <End Role="'Apartment-demands'" EntitySet="'Apartment-demands'" />

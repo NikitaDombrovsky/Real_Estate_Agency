@@ -66,7 +66,7 @@ namespace Agency
             if (Visibility == Visibility.Visible)
             {
                 Real_estate_agencyEntities2.GetContext().ChangeTracker.Entries().ToList().ForEach(p => p.Reload());
-                apartmentDataGrid.ItemsSource = Real_estate_agencyEntities2.GetContext().Clients.ToList();
+                apartmentDataGrid.ItemsSource = Real_estate_agencyEntities2.GetContext().Apartments.ToList();
                 // clientDataGrid.Items.Refresh();
             }
         }

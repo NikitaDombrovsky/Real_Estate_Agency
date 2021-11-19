@@ -21,9 +21,9 @@ namespace Agency
     public partial class MainWindow : Window
     {
         /*
-        private static Real_estate_agencyEntities1 _context;
-        public Real_estate_agencyEntities1()
-            : base("name=Real_estate_agencyEntities1")
+        private static Real_estate_agencyEntities2 _context;
+        public Real_estate_agencyEntities2()
+            : base("name=Real_estate_agencyEntities2")
         {
         }
 
@@ -31,10 +31,10 @@ namespace Agency
         {
             throw new UnintentionalCodeFirstException();
         }
-        public static Real_estate_agencyEntities1 GetContext()
+        public static Real_estate_agencyEntities2 GetContext()
         {
             if (_context == null)
-                _context = new Real_estate_agencyEntities1();
+                _context = new Real_estate_agencyEntities2();
             return _context;
         }
         */

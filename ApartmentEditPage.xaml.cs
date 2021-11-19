@@ -35,6 +35,7 @@ namespace Agency
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             StringBuilder errors = new StringBuilder();
+            
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());

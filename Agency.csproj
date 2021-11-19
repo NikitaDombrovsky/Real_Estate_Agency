@@ -200,6 +200,9 @@
     <Compile Include="Supply.cs">
       <DependentUpon>REA_Model.tt</DependentUpon>
     </Compile>
+    <Compile Include="Supply_View.cs">
+      <DependentUpon>REA_Model.tt</DependentUpon>
+    </Compile>
     <Page Include="ApartmentEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

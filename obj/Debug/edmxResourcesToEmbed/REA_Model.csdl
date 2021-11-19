@@ -397,5 +397,19 @@
       <End Role="Districts" EntitySet="Districts" />
       <End Role="Supplies" EntitySet="Supplies" />
     </AssociationSet>
+    <EntitySet Name="Supply_View" EntityType="Real_estate_agencyModel.Supply_View" />
   </EntityContainer>
+  <EntityType Name="Supply_View">
+    <Key>
+      <PropertyRef Name="Id" />
+      <PropertyRef Name="AgentId" />
+      <PropertyRef Name="ClientId" />
+      <PropertyRef Name="name" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Price" Type="Int32" />
+    <Property Name="AgentId" Type="Int32" Nullable="false" />
+    <Property Name="ClientId" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="255" FixedLength="false" Unicode="true" />
+  </EntityType>
 </Schema>
