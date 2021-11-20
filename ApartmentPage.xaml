@@ -7,7 +7,6 @@
       mc:Ignorable="d" 
       d:DesignHeight="350" d:DesignWidth="800"
       Title="AppartmentPage" IsVisibleChanged="Page_IsVisibleChanged">
-
     <Grid>
         <Grid.RowDefinitions>
         <RowDefinition Height="*"/>
@@ -18,8 +17,6 @@
     </Grid.ColumnDefinitions>
     <DataGrid x:Name="apartmentDataGrid" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="True"  Margin="10" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Column="1">
         <DataGrid.Columns>
-            <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="Auto"/>
-             <DataGridTextColumn x:Name="firstNameColumn" Binding="{Binding Id_Districts}" Header="Id_Districts" Width="Auto"/>
             <DataGridTextColumn x:Name="middleNameColumn" Binding="{Binding Address_City}" Header="Город" Width="Auto"/>
             <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding Address_Street}" Header="Улица" Width="Auto"/>
             <DataGridTextColumn x:Name="phoneColumn" Binding="{Binding Address_House}" Header="Дом" Width="Auto"/>
@@ -29,6 +26,7 @@
             <DataGridTextColumn  Binding="{Binding TotalArea}" Header="Площадь" Width="Auto"/>
             <DataGridTextColumn  Binding="{Binding Rooms}" Header="Комнаты" Width="Auto"/>
             <DataGridTextColumn  Binding="{Binding Floor}" Header="Этажи" Width="Auto"/>
+            <DataGridTextColumn x:Name="nameColumn" Binding="{Binding District.name}" Header="Район" Width="Auto"/>
             <DataGridTemplateColumn Width="Auto">
                 <DataGridTemplateColumn.CellTemplate>
                     <DataTemplate>
@@ -47,7 +45,7 @@
     </DataGrid>
 
     <Grid Panel.ZIndex="-2" Background="Gray" Grid.Row="2" Grid.ColumnSpan="2"/>
-    <Button Content="Добавить" x:Name="BtnAdd" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Width="125" Click="BtnAdd_Click" />
+    <Button Content="Добавить" x:Name="BtnAdd" Grid.Row="2" Grid.Column="0" HorizontalAlignment="Left" Width="120" Click="BtnAdd_Click" />
 
 
 

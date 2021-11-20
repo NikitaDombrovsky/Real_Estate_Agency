@@ -25,9 +25,9 @@
         <TextBlock Text="Фамилия Агента" Grid.Row="2" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
         <TextBlock Text="Недвижимость" Grid.Row="3" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
         <TextBox Text="{Binding Price}" Grid.Column="1"   Height="30" Margin="0,0,10,0"/>
-        <ComboBox SelectedItem="{Binding Client.FirstName}" Grid.Column="1" Grid.Row="1"  Height="30" x:Name="ComboClient" DisplayMemberPath="Client.FirstName" Margin="0,0,10,0"/>
-        <ComboBox SelectedItem="{Binding Agent.FirstName}" Grid.Column="1" Grid.Row="2"  Height="30" x:Name="ComboAgent" DisplayMemberPath="Agent.FirstName" Margin="0,0,10,0"/>
-        <ComboBox SelectedItem="{Binding District.name}" Grid.Column="1" Grid.Row="3"  Height="30" x:Name="ComboDistricts" DisplayMemberPath="District.name" Margin="0,0,10,0"/>
+        <ComboBox SelectedItem="{Binding Client}" Grid.Column="1" Grid.Row="1"  Height="30" x:Name="ComboClient"  DisplayMemberPath="FirstName" Margin="0,0,10,0"/>
+        <ComboBox SelectedItem="{Binding Agent}" Grid.Column="1" Grid.Row="2"  Height="30" x:Name="ComboAgent" DisplayMemberPath="FirstName" Margin="0,0,10,0"/>
+        <ComboBox SelectedItem="{Binding District}" Grid.Column="1" Grid.Row="3"  Height="30" x:Name="ComboDistricts" DisplayMemberPath="name" Margin="0,0,10,0"/>
         <Grid Panel.ZIndex="-2" Background="Gray" Grid.Row="9" Grid.ColumnSpan="2"/>
         <Button Content="Сохранить" x:Name="BtnAdd"  Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Width="200" Height="35"  Click="BtnAdd_Click" />
     </Grid>

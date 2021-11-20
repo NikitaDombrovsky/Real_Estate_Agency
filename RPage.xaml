@@ -18,10 +18,9 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="agentDataGrid" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="True"  Margin="10" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Column="1">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="ID" Width="Auto"/>
                 <DataGridTextColumn x:Name="firstNameColumn" Binding="{Binding FirstName}" Header="Фамилия" Width="Auto"/>
                 <DataGridTextColumn x:Name="middleNameColumn" Binding="{Binding MiddleName}" Header="Имя" Width="Auto"/>
-                <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding LastName}" Header="Отчестов" Width="Auto"/>
+                <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding LastName}" Header="Отчество" Width="Auto"/>
                 <DataGridTextColumn x:Name="dealShareColumn" Binding="{Binding DealShare}" Header="Доля от комиссии" Width="Auto"/>
                 <DataGridTemplateColumn Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>

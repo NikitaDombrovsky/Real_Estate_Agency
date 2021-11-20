@@ -60,6 +60,15 @@ namespace Agency
             {
                 try
                 {
+                    /*
+                   if (Real_estate_agencyEntities2.GetContext().Clients.Where(p=>p.Id == _client.Id).Count() == 0 && Real_estate_agencyEntities2.GetContext().Demands.Where(h=>h.ClientId == _client.Id).Count() ==0)
+                        if (Real_estate_agencyEntities2.GetContext().Demands.Where(h => h.ClientId == _client.Id).Count() == 0)
+                        if (clientForRemoving.Count() == 0 )
+                        {
+
+                            MessageBox.Show("Лол");
+                        }
+                    */
                     Real_estate_agencyEntities2.GetContext().Clients.RemoveRange(clientForRemoving);
                     Real_estate_agencyEntities2.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");

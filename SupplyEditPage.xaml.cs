@@ -27,9 +27,10 @@ namespace Agency
             if (selectedsupply != null)
                 _supply = selectedsupply;
             DataContext = _supply;
-            ComboAgent.ItemsSource = Real_estate_agencyEntities2.GetContext().Supplies.ToList();
-            ComboClient.ItemsSource = Real_estate_agencyEntities2.GetContext().Supplies.ToList();
-            ComboDistricts.ItemsSource = Real_estate_agencyEntities2.GetContext().Supplies.ToList();
+           // ComboAgent.ItemsSource = Real_estate_agencyEntities2.GetContext().Supplies.ToList();
+            ComboClient.ItemsSource = Real_estate_agencyEntities2.GetContext().Clients.ToList();
+            ComboAgent.ItemsSource = Real_estate_agencyEntities2.GetContext().Agents.ToList();
+            ComboDistricts.ItemsSource = Real_estate_agencyEntities2.GetContext().Districts.ToList();
         }
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {

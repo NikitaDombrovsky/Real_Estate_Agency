@@ -19,6 +19,7 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="100"/>
@@ -42,7 +43,9 @@
         <TextBox Text="{Binding Coordinate_longitude}" Grid.Column="1" Grid.Row="5"  Height="30" Margin="0,0,10,0"/>
         <TextBox Text="{Binding TotalFloors}" Grid.Column="1" Grid.Row="6"  Height="30" Margin="0,0,10,0"/>
         <TextBox Text="{Binding TotalArea}" Grid.Column="1" Grid.Row="7"  Height="30" Margin="0,0,10,0"/>
+        <TextBlock Text="Районы" Grid.Row="8" Height="30" Width="100" Foreground="Black" Background="LightGray"/>
+        <ComboBox SelectedItem="{Binding District}" Grid.Column="1" Grid.Row="8"  Height="30" x:Name="ComboDistricts" DisplayMemberPath="name" Margin="0,0,10,0"/>
         <Grid Panel.ZIndex="-2" Background="Gray" Grid.Row="9" Grid.ColumnSpan="2"/>
-        <Button Content="Сохранить" x:Name="BtnAdd"  Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Width="200" Height="35"  Click="BtnAdd_Click" />
+        <Button Content="Сохранить" x:Name="BtnAdd"  Grid.Row="9" Grid.Column="0" Grid.ColumnSpan="2" Width="200" Height="25"  Click="BtnAdd_Click" />
     </Grid>
 </Page>

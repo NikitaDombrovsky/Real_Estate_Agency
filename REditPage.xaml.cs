@@ -41,6 +41,8 @@ namespace Agency
                 errors.AppendLine("Укажите Фамилию");
             if (string.IsNullOrWhiteSpace(_agent.LastName))
                 errors.AppendLine("Укажите Отчество");
+            if (_agent.DealShare > 100 || _agent.DealShare < 0)
+                errors.AppendLine("Доля от комиссии не может быть больше 100");
             if (errors.Length > 0)
             {
                 MessageBox.Show(errors.ToString());

@@ -46,6 +46,7 @@ namespace Agency
             {
                 try
                 {
+                    
                     Real_estate_agencyEntities2.GetContext().Apartments.RemoveRange(apartmentForRemoving);
                     Real_estate_agencyEntities2.GetContext().SaveChanges();
                     MessageBox.Show("Данные удалены!");

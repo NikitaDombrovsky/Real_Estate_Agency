@@ -295,7 +295,6 @@ G:\Agency\obj\Debug\Agency.csproj.CoreCompileInputs.cache
 G:\Agency\obj\Debug\Agency.csproj.CopyComplete
 G:\Agency\obj\Debug\Agency.exe
 G:\Agency\obj\Debug\Agency.pdb
-F:\Agency\obj\Debug\Agency.csprojAssemblyReference.cache
 F:\Agency\obj\Debug\ApartmentEditPage.g.cs
 F:\Agency\obj\Debug\ApartmentPage.g.cs
 F:\Agency\obj\Debug\ApartmentEditPage.baml
@@ -312,3 +311,4 @@ F:\Agency\obj\Debug\LandsEditPage.g.cs
 F:\Agency\obj\Debug\LandsEditPage.baml
 F:\Agency\obj\Debug\SupplyEditPage.g.cs
 F:\Agency\obj\Debug\SupplyEditPage.baml
+F:\Agency\obj\Debug\Agency.csproj.AssemblyReference.cache

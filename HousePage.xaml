@@ -18,8 +18,6 @@
         </Grid.ColumnDefinitions>
         <DataGrid x:Name="houseDataGrid" AutoGenerateColumns="False" IsReadOnly="True" EnableRowVirtualization="True"  Margin="10" RowDetailsVisibilityMode="VisibleWhenSelected" Grid.Column="1">
             <DataGrid.Columns>
-                <DataGridTextColumn x:Name="idColumn" Binding="{Binding Id}" Header="Id" Width="Auto"/>
-                <DataGridTextColumn x:Name="firstNameColumn" Binding="{Binding Id_Districts}" Header="Id_Districts" Width="Auto"/>
                 <DataGridTextColumn x:Name="middleNameColumn" Binding="{Binding Address_City}" Header="Город" Width="Auto"/>
                 <DataGridTextColumn x:Name="lastNameColumn" Binding="{Binding Address_Street}" Header="Улица" Width="Auto"/>
                 <DataGridTextColumn x:Name="phoneColumn" Binding="{Binding Address_House}" Header="Дом" Width="Auto"/>
@@ -28,6 +26,7 @@
                 <DataGridTextColumn  Binding="{Binding Coordinate_longitude}" Header="Долгота" Width="Auto"/>
                 <DataGridTextColumn  Binding="{Binding TotalFloors}" Header="Комнаты" Width="Auto"/>
                 <DataGridTextColumn  Binding="{Binding TotalArea}" Header="Площадь" Width="Auto"/>
+                <DataGridTextColumn x:Name="nameColumn" Binding="{Binding District.name}" Header="Район" Width="Auto"/>
                 <DataGridTemplateColumn Width="Auto">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
